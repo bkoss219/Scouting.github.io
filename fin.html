@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="FinApp">
+    <head>
+        <title>Prototype App</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+        <script src="fin.js"></script>
+    </head>
+    <body>
+        <div ng-controller="FinController as finData">
+            <form ng-submit="" method="post">
+                <h3>Please ensure the following data is correct:</h3>
+                <p>Team #: {{finData.TeamNumber}}<br />Match #: {{finData.MatchNumber}}<br />Aliance Color: {{finData.MatchColor}}<br />Low Goals Scored: {{finData.LGS}}<br />Low Goals Missed: {{finData.LGM}}<br />High Goals Scored: {{finData.HGS}}<br />High Goals Missed: {{finData.HGM}}<br />Gears Scored: {{finData.GS}}<br />Gears Dropped: {{finData.GD}}<br />Robot Scaled: {{finData.RS}}<br />Robot Disconnected: {{finData.RD}}<br />Comments: {{finData.C}}<br />Auto Strategy: {{finData.AS}}<br />Auto Data Points: {{finData.ADP}}<br />Drive Train: {{finData.DT}}<br />Ground Gear: {{finData.GG}}<br />Hoppers: {{finData.H}}</p>
+                <input type="submit" value="Complete" />
+            </form>
+        </div>
+    </body>
+</html>

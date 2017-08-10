@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="LoadApp">
+    <head>
+        <title>Prototype App</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+        <script src="load.js"></script>
+    </head>
+    <body>
+        <div ng-controller="LoadController as loadData">
+            <h2>Team {{loadData.TeamNumber}}<br />Match {{loadData.MatchNumber}}, {{loadData.MatchColor}} Aliance</h2>
+        <form ng-submit="loadData.loadSubmit()" action="fin.html">
+            Low Goals Scored<input ng-model="LGS" type="number" min="0" placeholder="Low Goals Scored" id="LGS" list="LGSdl" /><br />
+            Low Goals Missed<input ng-model="LGM" type="number" min="0" placeholder="Low Goals Missed" id="LGM" list="LGMdl" /><br />
+            High Goals Scored<input ng-model="HGS" type="number" min="0" placeholder="High Goals Scored" id="HGS" list="HGSdl" /><br />
+            High Goals Missed<input ng-model="HGM" type="number" min="0" placeholder="High Goals Missed" id="HGM" list="HGMdl" /><br />
+            Gears Scored<input ng-model="GS" type="number" min="0" placeholder="Gears Scored" id="GS" list="GSdl" /><br />
+            Gears Dropped <input ng-model="GD" type="number" min="0" placeholder="Gears Dropped" id="GD" list="GDdl" /><br /><br />
+            Robot Scaled:<label><input ng-model="RS" type="radio" value="1" />True</label><label><input ng-model="RS" type="radio" value="0" />False</label><br /><br />
+            Robot Disconnected:<label><input ng-model="RD" type="radio" value="1" />True</label><label><input ng-model="RD" type="radio" value="0" />False</label><br /><br />
+            Comments<input ng-model="C" type="text" placeholder="Comments" id="C" list="Cdl" /><br />
+            Autonomous Strategy<input ng-model="AS" type="text" placeholder="Auto Strategy" id="AS" list="ASdl" /><br />
+            Auto Data Points<input ng-model="ADP" type="text" placeholder="Auto Data Points" id="ADP" list="ADPdl" /><br />
+            Drive Train<input ng-model="DT" type="text" placeholder="Drive Train" id="DT" list="DTdl" /><br />
+            Ground Gear:<label><input ng-model="GG" type="radio" value="1" />True</label><label><input ng-model="GG" type="radio" value="0" />False</label><br />
+            Hoppers<input ng-model="H" type="number" min="0" placeholder="Hoppers" id="H" list="Hdl" /><br />
+            <datalist id="LGSdl">
+                <option ng-value="{{loadData.LGS}}" />
+            </datalist>
+            <datalist id="LGMdl">
+                <option ng-value="{{loadData.LGM}}" />
+            </datalist>
+            <datalist id="HGSdl">
+                <option ng-value="{{loadData.HGS}}" />
+            </datalist>
+            <datalist id="HGMdl">
+                <option ng-value="{{loadData.HGM}}" />
+            </datalist>
+            <datalist id="GSdl">
+                <option ng-value="{{loadData.GS}}" />
+            </datalist>
+            <datalist id="GDdl">
+                <option ng-value="{{loadData.GD}}" />
+            </datalist>
+            <datalist id="Hdl">
+                <option ng-value="{{loadData.H}}" />
+            </datalist>
+        <input type="submit" value="Done" />
+    </form>
+    </div>
+    </body>
+</html>
